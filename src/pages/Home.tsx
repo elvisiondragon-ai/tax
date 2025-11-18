@@ -1,3 +1,4 @@
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { CheckCircle2, FileText, Shield, TrendingDown, Clock, Users } from "lucide-react";
@@ -60,6 +61,26 @@ const Home = () => {
                 </Button>
               </Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Video Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-md mx-auto">
+            <AspectRatio ratio={9 / 16}>
+              <video
+                src="https://nlrgdhpmsittuwiiindq.supabase.co/storage/v1/object/public/admin-image/tax.mp4"
+                poster="https://nlrgdhpmsittuwiiindq.supabase.co/storage/v1/object/public/admin-image/tax.jpg"
+                controls
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover rounded-lg"
+              />
+            </AspectRatio>
           </div>
         </div>
       </section>
