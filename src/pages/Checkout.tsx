@@ -31,7 +31,7 @@ const Checkout = () => {
     }
 
     const whatsappMessage = `Halo, saya ${formData.name} dari ${formData.company}. Saya ingin konsultasi mengenai layanan Tax Consultant. Email saya ${formData.email} dan nomor WhatsApp saya ${formData.phone}. Kebutuhan khusus saya: ${formData.requirements}`;
-    const whatsappLink = `https://wa.me/0895325633487?text=${encodeURIComponent(whatsappMessage)}`;
+    const whatsappLink = `https://wa.me/62895325633487?text=${encodeURIComponent(whatsappMessage)}`;
     window.open(whatsappLink, "_blank");
   };
 

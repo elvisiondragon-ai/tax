@@ -50,7 +50,7 @@ const Home = () => {
               Solusi Laporan Keuangan & Pajak yang Cepat, Akurat, dan Terpercaya
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="https://wa.me/0895325633487" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/62895325633487" target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6 h-auto">
                   Order Now — Start Rp 10.000.000
                 </Button>
@@ -168,7 +168,7 @@ const Home = () => {
           <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
             Dapatkan analisis gratis untuk kebutuhan laporan keuangan dan konsultasi pajak perusahaan Anda
           </p>
-          <a href="https://wa.me/0895325633487" target="_blank" rel="noopener noreferrer">
+          <a href="https://wa.me/62895325633487" target="_blank" rel="noopener noreferrer">
             <Button size="lg" className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6 h-auto">
               Mulai Konsultasi Sekarang
             </Button>

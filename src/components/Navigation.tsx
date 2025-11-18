@@ -9,7 +9,7 @@ const Navigation = () => {
     { path: "/testimony", label: "Testimony", icon: MessageSquare },
     { path: "/services", label: "Services", icon: Briefcase },
     { path: "/profile", label: "Profile", icon: User },
-    { path: "https://wa.me/0895325633487", label: "Order", icon: ShoppingCart },
+    { path: "https://wa.me/62895325633487", label: "Order", icon: ShoppingCart },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -56,4 +56,3 @@ const Navigation = () => {
 };
 
 export default Navigation;
-

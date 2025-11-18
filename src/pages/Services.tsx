@@ -81,7 +81,7 @@ const Services = () => {
                   </div>
 
                   {/* CTA Button */}
-                  <a href="https://wa.me/0895325633487" target="_blank" rel="noopener noreferrer">
+                  <a href="https://wa.me/62895325633487" target="_blank" rel="noopener noreferrer">
                     <Button className="whitespace-nowrap">
                       Konsultasi Sekarang
                       <ArrowRight className="ml-2 h-4 w-4" />
@@ -155,7 +155,7 @@ const Services = () => {
               <div className="text-center">
                 <p className="text-3xl font-bold mb-4">Mulai dari Rp 10.000.000</p>
                 <p className="text-white/80 mb-6">Harga disesuaikan dengan skala dan kompleksitas bisnis</p>
-                <a href="https://wa.me/0895325633487" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/62895325633487" target="_blank" rel="noopener noreferrer">
                   <Button size="lg" className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6 h-auto">
                     Order Sekarang
                   </Button>
