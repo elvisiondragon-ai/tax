@@ -74,9 +74,7 @@ const Home = () => {
                 src="https://nlrgdhpmsittuwiiindq.supabase.co/storage/v1/object/public/admin-image/tax.mp4"
                 poster="https://nlrgdhpmsittuwiiindq.supabase.co/storage/v1/object/public/admin-image/tax.jpg"
                 controls
-                autoPlay
                 loop
-                muted
                 playsInline
                 className="w-full h-full object-cover rounded-lg"
               />
