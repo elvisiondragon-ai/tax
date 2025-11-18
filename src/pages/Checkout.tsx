@@ -6,12 +6,9 @@ import { Textarea } from "@/components/ui/textarea";
 import { CheckCircle2, Package } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
 
 const Checkout = () => {
   const { toast } = useToast();
-  const [isSubmitted, setIsSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -33,13 +30,9 @@ const Checkout = () => {
       return;
     }
 
-    // Show success state
-    setIsSubmitted(true);
-    
-    toast({
-      title: "Pesanan Berhasil Dikirim!",
-      description: "Tim kami akan segera menghubungi Anda untuk konsultasi lebih lanjut.",
-    });
+    const whatsappMessage = `Halo, saya ${formData.name} dari ${formData.company}. Saya ingin konsultasi mengenai layanan Tax Consultant. Email saya ${formData.email} dan nomor WhatsApp saya ${formData.phone}. Kebutuhan khusus saya: ${formData.requirements}`;
+    const whatsappLink = `https://wa.me/0895325633487?text=${encodeURIComponent(whatsappMessage)}`;
+    window.open(whatsappLink, "_blank");
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -49,62 +42,8 @@ const Checkout = () => {
     });
   };
 
-  if (isSubmitted) {
-    return (
-      <div className="min-h-screen flex flex-col">
-        <Navigation />
-        
-        <div className="flex-grow flex items-center justify-center py-20 px-4">
-          <Card className="max-w-2xl w-full p-12 text-center">
-            <div className="w-20 h-20 rounded-full bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center mx-auto mb-6">
-              <CheckCircle2 className="w-10 h-10 text-white" />
-            </div>
-            
-            <h2 className="text-3xl font-bold mb-4">Pesanan Berhasil Dikirim!</h2>
-            <p className="text-lg text-muted-foreground mb-6">
-              Terima kasih <strong className="text-foreground">{formData.name}</strong> atas kepercayaan Anda. 
-              Tim kami akan menghubungi Anda melalui email ({formData.email}) dan WhatsApp ({formData.phone}) 
-              dalam 1x24 jam untuk konsultasi awal.
-            </p>
-            
-            <div className="bg-secondary p-6 rounded-lg mb-8">
-              <h3 className="font-bold mb-3">Langkah Selanjutnya:</h3>
-              <ol className="text-left space-y-2 text-muted-foreground">
-                <li>1. Tim kami akan menghubungi Anda untuk konsultasi gratis</li>
-                <li>2. Analisis kebutuhan perusahaan Anda</li>
-                <li>3. Penyusunan proposal dan timeline</li>
-                <li>4. Mulai pekerjaan setelah agreement</li>
-              </ol>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg"
-                onClick={() => window.open("https://wa.me/628123456789", "_blank")}
-                className="bg-green-600 hover:bg-green-700"
-              >
-                Chat WhatsApp Sekarang
-              </Button>
-              <Button 
-                size="lg"
-                variant="outline"
-                onClick={() => window.location.href = "/"}
-              >
-                Kembali ke Home
-              </Button>
-            </div>
-          </Card>
-        </div>
-
-        <Footer />
-      </div>
-    );
-  }
-
   return (
-    <div className="min-h-screen flex flex-col">
-      <Navigation />
-      
+    <div>
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary-dark to-primary-light text-white py-20">
         <div className="container mx-auto px-4 text-center">
@@ -269,8 +208,6 @@ const Checkout = () => {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 };

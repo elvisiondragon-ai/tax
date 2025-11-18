@@ -1,6 +1,5 @@
 import { Card } from "@/components/ui/card";
 import { Quote, TrendingUp } from "lucide-react";
-import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import testimonial1 from "@/assets/testimonial-1.jpg";
 import testimonial2 from "@/assets/testimonial-2.jpg";
@@ -56,9 +55,7 @@ const Testimony = () => {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <Navigation />
-      
+    <div>
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary-dark to-primary-light text-white py-20">
         <div className="container mx-auto px-4 text-center">
@@ -148,8 +145,6 @@ const Testimony = () => {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 };

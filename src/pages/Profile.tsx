@@ -1,7 +1,5 @@
 import { Card } from "@/components/ui/card";
 import { Target, Eye, Award, Users, TrendingUp, Shield } from "lucide-react";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
 
 const Profile = () => {
   const values = [
@@ -28,9 +26,7 @@ const Profile = () => {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <Navigation />
-      
+    <div>
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary-dark to-primary-light text-white py-20">
         <div className="container mx-auto px-4 text-center">
@@ -191,8 +187,6 @@ const Profile = () => {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 };

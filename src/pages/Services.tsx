@@ -2,8 +2,6 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { FileText, Calculator, Shield, ClipboardCheck, FolderOpen, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
 
 const Services = () => {
   const services = [
@@ -40,9 +38,7 @@ const Services = () => {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <Navigation />
-      
+    <div>
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary-dark to-primary-light text-white py-20">
         <div className="container mx-auto px-4 text-center">
@@ -85,12 +81,12 @@ const Services = () => {
                   </div>
 
                   {/* CTA Button */}
-                  <Link to="/checkout">
+                  <a href="https://wa.me/0895325633487" target="_blank" rel="noopener noreferrer">
                     <Button className="whitespace-nowrap">
                       Konsultasi Sekarang
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
-                  </Link>
+                  </a>
                 </div>
               </Card>
             ))}
@@ -159,11 +155,11 @@ const Services = () => {
               <div className="text-center">
                 <p className="text-3xl font-bold mb-4">Mulai dari Rp 10.000.000</p>
                 <p className="text-white/80 mb-6">Harga disesuaikan dengan skala dan kompleksitas bisnis</p>
-                <Link to="/checkout">
+                <a href="https://wa.me/0895325633487" target="_blank" rel="noopener noreferrer">
                   <Button size="lg" className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6 h-auto">
                     Order Sekarang
                   </Button>
-                </Link>
+                </a>
               </div>
             </Card>
           </div>
@@ -207,8 +203,6 @@ const Services = () => {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 };

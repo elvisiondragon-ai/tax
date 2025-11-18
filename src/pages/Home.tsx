@@ -2,8 +2,6 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { CheckCircle2, FileText, Shield, TrendingDown, Clock, Users } from "lucide-react";
 import { Link } from "react-router-dom";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
 
 const Home = () => {
   const benefits = [
@@ -34,9 +32,7 @@ const Home = () => {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <Navigation />
-      
+    <div>
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-primary-dark via-primary to-primary-light text-white py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 opacity-10">
@@ -53,11 +49,11 @@ const Home = () => {
               Solusi Laporan Keuangan & Pajak yang Cepat, Akurat, dan Terpercaya
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link to="/checkout">
+              <a href="https://wa.me/0895325633487" target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6 h-auto">
                   Order Now — Start Rp 10.000.000
                 </Button>
-              </Link>
+              </a>
               <Link to="/services">
                 <Button size="lg" variant="outline" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary text-lg px-8 py-6 h-auto">
                   Lihat Layanan
@@ -151,15 +147,13 @@ const Home = () => {
           <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
             Dapatkan analisis gratis untuk kebutuhan laporan keuangan dan konsultasi pajak perusahaan Anda
           </p>
-          <Link to="/checkout">
+          <a href="https://wa.me/0895325633487" target="_blank" rel="noopener noreferrer">
             <Button size="lg" className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6 h-auto">
               Mulai Konsultasi Sekarang
             </Button>
-          </Link>
+          </a>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 };
